@@ -1,0 +1,27 @@
+<html>
+  <head>
+  {% block css %}
+  <link rel="stylesheet" href="{{ csslink }}">
+  {% endblock %}
+  <title>darkfi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+<body>
+<header>
+    {% block header %}
+      {% include 'header.html' %}
+    {% endblock %} 
+</header>
+    {% block content %}
+	
+    {% endblock %}
+
+<footer>
+        {% block footer %}
+	  {% include 'footer.html' %}
+        {% endblock %}
+</footer>
+</body>
+</html>

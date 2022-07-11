@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+{% extends "base.html" %}
+{% block content %}
+
+<div class = "arrow">
+     <p><a class = "remove-underline small-arrow" href= "{{url_for('test') }}">&#8592;</a></p>
+  </div>
+
+  <div class = "under-arrow">
+      <div class = "arrowframe19">
+        <div class = "arrowframe16">
+        <a class ="Archive1" style="font-family: IBMPlexMono-Regular;">Archive</a>
+      </div>
+     </div>
+     <div class = "arrowframe66">
+      
+      <div class = "category1frame19" style="list-style: none; font-family: IBMPlexMono-Regular;">
+       <div class = "category1frame19-16">
+        <a>CATEGORIES</a>
+      </div>
+     </div>
+    <div class = "all-category"> 
+     <div class = "category1frame20" style="list-style: none; font-family: IBMPlexMono-Regular;">
+       <div class = "category1frame20-16">
+          <a class = "remove-underline" href="{{ url_for('insight_archive') }}">Insights</a>
+       </div>
+     </div>
+
+       <div class = "category1frame21" style="list-style: none; font-family: IBMPlexMono-Regular;">
+        <div class = "category1frame21-16">
+         <a class = "remove-underline" href="{{ url_for('technology_archive') }}">Technology</a>
+       </div>
+      </div>
+
+       <div class = "category1frame22" style="list-style: none; font-family: IBMPlexMono-Regular;">
+         <div class = "category1frame22-16">
+         <a class = "remove-underline" href="{{ url_for('history_archive') }}">History</a>
+       </div>
+      </div>
+
+       <div class = "category1frame23" style="list-style: none; font-family: IBMPlexMono-Regular;">
+          <div class = "category1frame23-16">
+            <a class = "remove-underline" href="{{ url_for('market_archive') }}">Markets</a>
+          </div>
+       </div>
+       <div class = "category1frame24" style="list-style: none; font-family: IBMPlexMono-Regular;">
+        <div class = "category1frame24-16">
+         <a class = "remove-underline" href="{{ url_for('xenopoetisc_archive') }}">Xenopoetics</a>
+       </div>
+      </div>
+ </div>
+ </div>
+</div>
+
+
+
+<div class = "archives">
+  {% for article in data_to_show if article.category == 'insight' %}
+<div class = "wide-archive remove-underline" onclick ="location.href='{{ article.url }}';" style="cursor: pointer;">
+<div class = "archive">
+ <div class = "title-archive">
+ <div class = "rectangle"></div>
+  <a class = "bar-archive">{{article.title}}</a>
+ </div>
+  <div class = "archiveframe42"> 
+  <p>{{article.paragraph}}</p>
+  <div class = "archiveframe53">
+    <div class = "frame15"><a>{{article.list1}}</a></div>
+    <div class = "frame17"><a>{{article.list2}}</a></div>
+    <div class = "frame18"><a>{{article.list3}}</a></div>
+  </div>
+</div>
+ </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+<div class = "number-table">
+{% import "_macros.html" as macros %}
+{{ macros.pagination_widget(pages, 'insight_archive') }}
+</div>
+
+
+<div class = "above-footer">
+       <div class ="to-archive">
+        <div class ="frame10"></div>
+        <div class ="go-to-archive"><a class = "remove-underline" href ="{{ url_for('archive') }}">Archive</a></div>
+
+
+       </div>
+       <div class ="group54">
+        <div class="group53">
+         <div class="frame38">
+         <div class="tag1">
+          <a class = "remove-underline" href ="https://mobile.twitter.com/darkfisquad">
+            <img class = "down-follow-img" src="../static/files/icons/twitter.svg">
+          </a>
+         </div>
+         <div class="tag2">
+          <a class = "remove-underline" href ="https://element.dark.fi">
+            <img class = "down-follow-img" src="../static/files/icons/element.svg">
+          </a>
+          </div>
+          <div class="tag3">
+          <a class = "remove-underline" href ="https://github.com/darkrenaissance">
+            <img class = "down-follow-img" src="../static/files/icons/github.svg">
+          </a>
+          </div>
+          <div class="tag4">
+           <a class = "remove-underline" href ="https://t.me/darkrenaissance">
+            <img class = "down-follow-img" src="../static/files/icons/telegram.svg">
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+</div>
+{% endblock %}
+
+</html>
+

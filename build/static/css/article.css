@@ -1,0 +1,35 @@
+p img{
+ width: 100%;
+ height: 375px;
+ margin-top: 1px;
+}
+
+#header-titlelorem-ipsum.{
+ position: absolute;
+ color: white;
+ top: 150px;
+ left: 300px;
+}
+
+ul{
+ padding: 0;
+ color: #343434;
+ margin-left: 28%;
+}
+
+p{
+ font-family: "Inter-Regular.woff";
+ color: white;
+ padding-left: 28%;
+}
+
+li{
+ display: inline-block;
+  margin-left: 8px;
+  font-size: 8pt;
+}
+
+h2{
+ font-size: 27pt;
+}
+

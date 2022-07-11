@@ -1,0 +1,30 @@
+{% macro pagination_widget(pages, endpoint) %}
+<div class="number-one">
+        {% for p in pages if p['href'] == 1%}
+            <a href="{{ url_for(endpoint, page = p['href'], **kwargs) }}"
+                class="one"
+                aria-label={{p['page']}}>
+                <span aria-hidden="true">{{p['page_label'] | safe}}</span>
+                <span class="sr-only">{{p['page_label'] | safe}}</span> 
+            </a>
+        {% endfor %}
+                <div class = "one-line"></div><i class="arrow2 right"></i>
+</div>
+<div class="all-number">
+ <div class = "page-number">
+       {% for p in pages if p['href'] > 1 %}
+            <a href="{{ url_for(endpoint, page = p['href'], **kwargs) }}"
+                class="pagening"
+                aria-label={{p['page']}}>
+                <span aria-hidden="true">{{p['page_label'] | safe}}</span>
+                <span class="sr-only">{{p['page_label'] | safe}}</span>
+                <span class="bar2">{{p['bar2' | safe]}}</span>
+                <i aria-hidden="true">{{p['page_label1'] | safe}}</i>
+                <i class="sr-only">{{p['page_label1'] | safe}}</i>
+
+             </a>
+ {% endfor %}
+
+ </div>
+</div>
+{% endmacro %}

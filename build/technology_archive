@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<html>
+  <head>
+  
+  <link rel="stylesheet" href="/static/css/main2.css">
+  
+  <title>darkfi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+<body>
+<header>
+    
+      <header>
+
+   <div id="main">
+               <div id= "logo" href="/">
+                 <img src="../static/files/icons/logo.svg">
+               </div>
+               <div class = 'logo'><a>Blog</a></div>
+               <div id="myTopnav" class="nav">
+                <a class = "active remove-underline" href ="https://github.com/darkrenaissance/darkfi">Source code</a>
+                <a class = "man remove-underline" href ="https://dark.fi/manifesto.html">Manifesto</a>
+                <a class = "actives remove-underline" href = "https://element.dark.fi">Community</a>              
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+                </a>
+               </div>
+   </div>
+             <script>
+               function myFunction() {
+                 var x = document.getElementById("myTopnav");
+                 if (x.className === "nav") {
+                   x.className += " responsive";
+                 } else {
+                   x.className = "nav";
+                 }
+               }
+             </script>
+</header>
+     
+</header>
+    
+
+<div class = "arrow">
+     <p><a class = "remove-underline small-arrow" href= "/">&#8592;</a></p>
+  </div>
+
+  <div class = "under-arrow">
+      <div class = "arrowframe19">
+        <div class = "arrowframe16">
+        <a class ="Archive1" style="font-family: IBMPlexMono-Regular;">Archive</a>
+      </div>
+     </div>
+     <div class = "arrowframe66">
+      
+      <div class = "category1frame19" style="list-style: none; font-family: IBMPlexMono-Regular;">
+       <div class = "category1frame19-16">
+        <a>CATEGORIES</a>
+      </div>
+     </div>
+    <div class = "all-category"> 
+     <div class = "category1frame20" style="list-style: none; font-family: IBMPlexMono-Regular;">
+       <div class = "category1frame20-16">
+          <a class = "remove-underline" href="/insight_archive">Insights</a>
+       </div>
+     </div>
+
+       <div class = "category1frame21" style="list-style: none; font-family: IBMPlexMono-Regular;">
+        <div class = "category1frame21-16">
+         <a class = "remove-underline" href="/technology_archive">Technology</a>
+       </div>
+      </div>
+
+       <div class = "category1frame22" style="list-style: none; font-family: IBMPlexMono-Regular;">
+         <div class = "category1frame22-16">
+         <a class = "remove-underline" href="/history_archive">History</a>
+       </div>
+      </div>
+
+       <div class = "category1frame23" style="list-style: none; font-family: IBMPlexMono-Regular;">
+          <div class = "category1frame23-16">
+            <a class = "remove-underline" href="/market_archive">Markets</a>
+          </div>
+       </div>
+       <div class = "category1frame24" style="list-style: none; font-family: IBMPlexMono-Regular;">
+        <div class = "category1frame24-16">
+         <a class = "remove-underline" href="/xenopoetisc_archive">Xenopoetics</a>
+       </div>
+      </div>
+ </div>
+ </div>
+</div>
+
+
+
+<div class = "archives">
+  
+</div>
+
+
+<div class = "number-table">
+  <div class = "number-one">
+   <a href="/archive" class = "one">1</a>
+   <div class = "one-line"></div><i class="arrow2 right"></i>  
+</div>
+   <div class = "all-number">
+    <div class = "page-number">
+      <a href="/archive" class = "pagening-one" style="color: #FFFFFF;">1</a>
+      <a class = "bar-one">|</a>
+      <a href="" class = "pagening">2</a>
+      <a class = "bar2">|</a>
+      <a href="/archive4" class = "pagening">4</a>
+      <a class = "bar2">|</a>
+      <a href="/archive5" class = "pagening">5</a>
+      <a class = "bar2">|</a>
+      <a href="/archive6" class = "pagening">6</a>
+      <a class = "bar2">|</a>
+      <a href="/archive7" class = "pagening">7</a> 
+     </div><i class="arrow1 right"></i>
+   </div>
+</div>
+</div>
+
+<div class = "above-footer">
+       <div class ="to-archive">
+        <div class ="frame10"></div>
+        <div class ="go-to-archive"><a class = "remove-underline" href ="/archive">Archive</a></div>
+
+
+       </div>
+       <div class ="group54">
+        <div class="group53">
+         <div class="frame38">
+         <div class="tag1">
+          <a class = "remove-underline" href ="https://mobile.twitter.com/darkfisquad">
+            <img class = "down-follow-img" src="../static/files/icons/twitter.svg">
+          </a>
+         </div>
+         <div class="tag2">
+          <a class = "remove-underline" href ="https://element.dark.fi">
+            <img class = "down-follow-img" src="../static/files/icons/element.svg">
+          </a>
+          </div>
+          <div class="tag3">
+          <a class = "remove-underline" href ="https://github.com/darkrenaissance">
+            <img class = "down-follow-img" src="../static/files/icons/github.svg">
+          </a>
+          </div>
+          <div class="tag4">
+           <a class = "remove-underline" href ="https://t.me/darkrenaissance">
+            <img class = "down-follow-img" src="../static/files/icons/telegram.svg">
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+</div>
+
+
+<footer>
+        
+	  <footer>
+  <div class = "footer">
+    <div id ="box">
+      <div class ="box1"></div>
+      <div class ="box2"></div>
+      <div class ="box3"></div>
+      <div class ="box4"></div>
+      <div class ="box5"></div>
+      <div class ="box6"></div>
+      <div class ="box7"></div>
+      <div class ="box8"></div>
+      <div class ="box9"></div>
+    </div>
+    </div>
+
+    <div class = "down_footer">
+     <div id="down_footer"></div>
+    </div>
+
+</footer>
+
+        
+</footer>
+</body>
+</html>

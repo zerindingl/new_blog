@@ -1,0 +1,27 @@
+<header>
+
+   <div id="main">
+               <div id= "logo" href="{{ url_for('test') }}">
+                 <img src="../static/files/icons/logo.svg">
+               </div>
+               <div class = 'logo'><a>Blog</a></div>
+               <div id="myTopnav" class="nav">
+                <a class = "active remove-underline" href ="https://github.com/darkrenaissance/darkfi">Source code</a>
+                <a class = "man remove-underline" href ="https://dark.fi/manifesto.html">Manifesto</a>
+                <a class = "actives remove-underline" href = "https://element.dark.fi">Community</a>              
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+                </a>
+               </div>
+   </div>
+             <script>
+               function myFunction() {
+                 var x = document.getElementById("myTopnav");
+                 if (x.className === "nav") {
+                   x.className += " responsive";
+                 } else {
+                   x.className = "nav";
+                 }
+               }
+             </script>
+</header>

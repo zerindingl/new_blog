@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+{% extends "base.html" %}
+{% block content %}
+
+<div id = "featured-article">
+ <div class ="featured-paragraph">
+   <div class = "featured">
+     <a style="font-family: IBMPlexMono-Regular;">Featured article</a>
+   </div>
+ </div>
+</div>
+
+<div id = "articles">
+  <span>
+    <a class = "remove-underline" href ="{{ featured.url }}">
+      <img src = "{{ featured.img }}" class = "img-node">
+    </a>
+   </span>
+   <span class = "title1">
+     <div class = "title-box">
+         <div class = "vertical"></div>
+         <div class = "frame7"><a>{{ featured.title }}</a></div>
+         <div class = "small-box">
+           <div class = "vertical-title"><a>{{ featured.title }}</a></div>
+         </div>
+     </div>
+     <p>{{ featured.paragraph }}</p>
+     <div class = "frame53" style="font-family: IBMPlexMono-Regular; line-height: 1em;">
+          <div class = "frame15">
+          <div class="line10"></div>
+          <a>{{ featured.list1 }}</a>
+          <div class="line11"></div>
+          </div>
+          <div class = "frame17">
+          <div class="line12"></div>
+          <a class = "remove-underline" href = "{{ featured.url }}">{{featured.list2}}</a>
+          <div class="line13"></div>
+          </div>
+          <div class = "frame18">
+          <div class="line14"></div>
+          <a>{{ featured.list3 }}</a>
+          <div class="line15"></div>
+          </div>
+     </div>
+   </span>
+</div>
+
+<div class = "frame141">
+        <div class="categories_bar1"><a class="categories_bar">Categories</a></div>
+        <div class = "in-tec-his">
+          <div><a class = "insight remove-underline" href="{{ url_for('insight_archive') }}">Insights</a></div>
+          <div><a class = "technology remove-underline" href="{{ url_for('technology_archive') }}">Technology</a></div>
+          <div><a class = "history remove-underline" href="{{ url_for('history_archive') }}">History</a></div>
+        </div>
+        <div class="ma-xe-oth">
+          <div><a class = "market remove-underline" href="{{ url_for('market_archive') }}">Markets</a></div>
+          <div><a class = "xenopoetisc remove-underline" href="{{ url_for('xenopoetisc_archive') }}">Xenopoetisc</a></div>
+          <div><a class = "other remove-underline">other</a></div>
+        </div>
+</div>
+
+<div class = "frame137">
+   <div class = "frame160">
+     <div class= "frame139">
+      <div class="categories_bar1"><a class="categories_bar">Categories</a></div>
+      <div class="frame65">
+        <div class = "in-tec">
+          <div><a class = "insight remove-underline" href="{{ url_for('insight_archive') }}">Insights</a></div>
+          <div><a class = "technology remove-underline" href="{{ url_for('technology_archive') }}">Technology</a></div>
+        </div>
+        <div class = "hi-ma">
+          <div><a class = "history remove-underline" href="{{ url_for('history_archive') }}">History</a></div>
+          <div><a class = "market remove-underline" href="{{ url_for('market_archive') }}">Markets</a></div>
+        </div>
+        <div class = "xe-oth">  
+          <div><a class = "xenopoetisc remove-underline" href="{{ url_for('xenopoetisc_archive') }}">Xenopoetisc</a></div>
+          <div><a class = "other remove-underline">other</a></div>     
+        </div>
+      </div>
+     </div>
+   </div>
+   <div class = "frame136">
+     <div class = "frame61">
+       <div class="frame19">
+        <div class="frame16">
+          <a class ="paragraph" style="font-family: IBMPlexMono-Regular;">Latest articles</a>
+        </div>
+       </div>
+     </div>
+     <div class = "group">
+       {% for article in posts %}
+        <div class ="latest-img remove-underline" onclick ="location.href='{{ article.url }}';" style="cursor: pointer;">
+          <div class="frame38">
+            <div class ="img-1">
+               <img src ="{{ article.img }}" class = "img-1">
+            </div>
+            <figcaption class = "title-img">
+             <div class = "style"> 
+               <div class= "bar"></div>
+               <div class ="title">{{article.title}}</div>
+               <div class = "frame7"><a>{{article.title}}</a></div>
+             </div>
+             <div class="frame42">
+                <a>{{ article.paragraph }}</a>
+                <div class = "frame53">
+                  <div class="frame15">
+                  <div class="line10"></div>
+                  <a>{{article.list1}}</a>
+                  <div class="line11"></div>
+                  </div>
+                  <div class="frame17">
+                  <div class="line12"></div>
+                  <a class = "remove-underline" href = "{{ article.url }}">{{article.list2}}</a>
+                  <div class="line13"></div>
+                  </div>
+                  <div class="frame18">
+                  <div class="line14"></div>
+                  <a>{{article.list3}}</a>
+                  <div class="line15"></div>
+                  </div>
+                </div>
+             </div>
+            </figcaption>
+          </div>
+        </div>
+       {% endfor %}
+     </div>
+   </div>
+</div>
+
+   <div class="frame162">
+      <div class = "all-articles" onclick ="location.href='{{ url_for('archive') }}';" style="cursor: pointer;">
+         <div class="frame19">
+           <div class="frame16">
+             <a class ="paragraph"style="font-family: IBMPlexMono-Regular;">All Articles &#8594;</a>
+           </div>
+         </div>
+      </div>
+   </div>
+<div class="frame138">
+  <div class = "frame136">
+   <div class = "frame61">
+     <div class="frame19">
+      <div class="frame16">
+       <a class ="paragraph" style="font-family: IBMPlexMono-Regular;">category1</a>
+      </div>
+     </div>
+   </div>
+   <div class = "group">
+    {% for article in history[-4:] if article.category == 'history' %}
+      <div class ="latest-img remove-underline" onclick ="location.href='{{ article.url }}';" style="cursor: pointer;">
+       <div class="frame38">
+        <div class ="img-1">
+         <img src ="{{ article.img }}" class = "img-1">
+        </div>
+        <figcaption class = "title-img">
+          <div class = "style">
+            <div class= "bar"></div>
+            <div class = "frame7"><a>{{article.title}}</a></div>
+            <div class ="title">{{article.title}}</div>
+          </div>
+          <div class="frame42">
+             <a>{{ article.paragraph }}</a>
+             <div class = "frame53">
+                  <div class="frame15">
+                  <div class="line10"></div>
+                  <a>{{article.list1}}</a>
+                  <div class="line11"></div>
+                  </div>
+                  <div class="frame17">
+                  <div class="line12"></div>
+                  <a class = "remove-underline" href = "{{ article.url }}">{{article.list2}}</a>
+                  <div class="line13"></div>
+                  </div>
+                  <div class="frame18">
+                  <div class="line14"></div>
+                  <a>{{article.list3}}</a>
+                  <div class="line15"></div>
+                  </div>
+              </div>
+          </div>
+        </figcaption>
+       </div>
+      </div>
+    {% endfor %}
+   </div> 
+  </div>
+  <div class="frame161">
+      <div class = "all-articles" onclick ="location.href='{{ url_for('archive') }}';" style="cursor: pointer;">
+         <div class="frame19">
+           <div class="frame16">
+             <a class ="paragraph"style="font-family: IBMPlexMono-Regular;">All Articles &#8594;</a>
+           </div>
+         </div>
+      </div>
+  </div>
+
+</div>
+
+<div class = "above-footer">
+       <div class ="to-archive">
+          <div class ="frame10"></div>
+          <div class ="go-to-archive"><a class = "remove-underline" href ="{{ url_for('archive') }}">Archive</a></div>
+       </div>
+       <div class ="group54">
+        <div class="group53">
+         <div class="frame38">
+         <div class="tag1">
+          <a class = "remove-underline" href ="https://mobile.twitter.com/darkfisquad">
+            <img class = "down-follow-img" src="../static/files/icons/twitter.svg">
+          </a>
+         </div>
+         <div class="tag2">
+          <a class = "remove-underline" href ="https://element.dark.fi">
+            <img class = "down-follow-img" src="../static/files/icons/element.svg">
+          </a>
+          </div>
+          <div class="tag3">
+          <a class = "remove-underline" href ="https://github.com/darkrenaissance">
+            <img class = "down-follow-img" src="../static/files/icons/github.svg">
+          </a>
+          </div>
+          <div class="tag4">
+           <a class = "remove-underline" href ="https://t.me/darkrenaissance">
+            <img class = "down-follow-img" src="../static/files/icons/telegram.svg">
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+</div>
+{% endblock %}
+</html>
